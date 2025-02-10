@@ -44,7 +44,7 @@ export default function AddProductToCart({ product }: AddProductToCartProps) {
     </>
   ) : (
     <IconButton disabled={isFetching} onClick={addProduct} size="large">
-      <CartIcon color={"secondary"} />
+      <CartIcon color={"info"} />
     </IconButton>
   );
 }

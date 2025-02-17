@@ -1,9 +1,9 @@
 import * as cdk from 'aws-cdk-lib';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
-import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
 import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
 import { RemovalPolicy } from 'aws-cdk-lib';
+import { S3BucketOrigin } from "aws-cdk-lib/aws-cloudfront-origins";
 
 export class CdkDeployAppStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
@@ -21,7 +21,7 @@ export class CdkDeployAppStack extends cdk.Stack {
     // CloudFront distribution
     const distribution = new cloudfront.Distribution(this, 'ReactAppDistribution', {
       defaultBehavior: {
-        origin: new origins.S3Origin(bucket),
+        origin: S3BucketOrigin.withOriginAccessControl(bucket),
         viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
         originRequestPolicy: cloudfront.OriginRequestPolicy.CORS_S3_ORIGIN,
         allowedMethods: cloudfront.AllowedMethods.ALLOW_GET_HEAD_OPTIONS,

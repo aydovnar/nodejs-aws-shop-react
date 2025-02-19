@@ -1,3 +1,8 @@
+## Deployment links
+
+- [Cloudfront](https://d2kdejvzt251g9.cloudfront.net/)
+- [S3](https://aydovnar-s3-bucket.s3.eu-central-1.amazonaws.com/)
+
 # React-shop-cloudfront
 
 This is frontend starter project for nodejs-aws mentoring program. It uses the following technologies:

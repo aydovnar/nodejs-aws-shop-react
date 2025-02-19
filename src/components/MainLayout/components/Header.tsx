@@ -25,7 +25,7 @@ export default function Header() {
 
   return (
     <AppBar position="relative">
-      <Toolbar sx={{ bgcolor: "coral" }}>
+      <Toolbar sx={{ bgcolor: "#0F3460" }}>
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
           <Link
             component={RouterLink}

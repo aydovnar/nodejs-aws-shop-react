@@ -4,7 +4,7 @@ const API_PATHS = {
     "http://aydovnar-cart-api-develop.eu-central-1.elasticbeanstalk.com/prod/profile/cart",
   import: "https://w2kepyqpj4.execute-api.eu-central-1.amazonaws.com/prod",
   bff: "http://aydovnar-bff-api-production.eu-central-1.elasticbeanstalk.com/",
-  cart: "https://poel5wk6ki.execute-api.eu-central-1.amazonaws.com/prod/",
+  cart: "http://aydovnar-cart-api-develop.eu-central-1.elasticbeanstalk.com/prod",
 };
 
 export default API_PATHS;
